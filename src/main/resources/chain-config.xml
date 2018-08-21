@@ -1,0 +1,12 @@
+<catalog name="auto-sales">
+    <chain name="sell-vehicle">
+        <command id="GetCustomerInfo" className="com.sample.apache.commons.commands.GetCustomerInfo"/>
+        <command id="TestDriveVehicle" className="com.sample.apache.commons.commands.TestDriveVehicle"/>
+        <command id="NegotiateSale" className="com.sample.apache.commons.commands.NegotiateSale"/>
+        <command className="org.apache.commons.chain.generic.LookupCommand"  catalogName="auto-sales" name="arrange-financing" optional="true"/>
+        <command id="CloseSale" className="com.sample.apache.commons.commands.CloseSale"/>
+    </chain>
+    <chain name="arrange-financing">
+        <command id="ArrangeFinacing" className="com.sample.apache.commons.commands.ArrangeFinacing"/>
+    </chain>
+</catalog>
